@@ -1,54 +1,83 @@
-function func1() {
-  const input = document.getElementById("inp").value;
-  const converter = document.getElementById("conv");
-  const result = document.getElementById("result");
-  const ronEur = input / 4.95;
-  const eurRon = input * 4.95;
-  const ronUsd = input / 4.45;
-  const usdRon = input * 4.45;
+// element.classList.remove("active");
+// element.classList.add("active");
+// function active(element) {
+//   element.classList.add("active");
+// }
 
-  if (converter.value === "roneur") {
-    result.value = ronEur;
-  } else if (converter.value === "eurron") {
-    result.value = eurRon;
-  } else if (converter.value === "ronusd") {
-    result.value = ronUsd;
-  } else if (converter.value === "usdron") {
-    result.value = usdRon;
-  } else {
-    return "No input added";
-  }
-}
-function func2() {
-  const input1 = document.getElementById("inp1").value;
-  const converter1 = document.getElementById("conv1");
-  const result1 = document.getElementById("result1");
-  const kmMt = input1 / 1000;
-  const mtKm = input1 * 1000;
-  const kmMl = input1 / 1.609;
-  const mlKm = input1 * 1.609;
-  const mtFt = input1 * 3.2808;
-  const ftMt = input1 / 3.2808;
-  const mtIn = input1 * 39.37;
-  const inMt = input1 / 39.37;
+// function inactive(element) {
+//   element.classList.remove("active");
+// }
+// expBtn.addEventListener("click", function () {
+//   active(expBtn);
+//   inactive(incBtn);
+// });
+const expBtn = document.querySelector(".tab1");
+const incBtn = document.querySelector(".tab2");
+const allBtn = document.querySelector(".tab3");
+const tabView = document.querySelector("#incomes");
 
-  if (converter1.value === "kmmeters") {
-    result1.value = kmMt;
-  } else if (converter1.value === "meterskm") {
-    result1.value = mtKm;
-  } else if (converter1.value === "kmmiles") {
-    result1.value = kmMl;
-  } else if (converter1.value === "mileskm") {
-    result1.value = mlKm;
-  } else if (converter1.value === "metersfeet") {
-    result1.value = mtFt;
-  } else if (converter1.value === "feetmeters") {
-    result1.value = ftMt;
-  } else if (converter1.value === "metersinch") {
-    result1.value = mtIn;
-  } else if (converter1.value === "inchmeters") {
-    result1.value = inMt;
-  } else {
-    return "No input added";
-  }
+// const text = document.createElement("div");
+//
+// const textnode = document.createTextNode("input");
+
+function createDiv() {
+  const div = document.createElement("div");
+  div.id = "div_id";
+  div.className = "div_class";
+  div.style = "background-color: red;";
+  div.style.width = "100px";
+  div.style.height = "100px";
+  div.innerHTML = "New Div";
+  document.body.appendChild(div);
 }
+
+function activeExpBtn() {
+  tabView.innerHTML = "Expenses Tab";
+  tabView.style.backgroundColor = "red";
+  // tabView.classList.add("newClass");
+
+  expBtn.classList.add("active");
+  incBtn.classList.remove("active");
+}
+
+function activeIncBtn() {
+  tabView.innerHTML = "Incomes Tab";
+  tabView.style.backgroundColor = "white";
+
+  expBtn.classList.remove("active");
+  allBtn.classList.remove("active");
+  incBtn.classList.add("active");
+}
+
+function activeAllBtn() {
+  tabView.innerHTML = "All Tab";
+  tabView.style.backgroundColor = "green";
+
+  expBtn.classList.remove("active");
+  allBtn.classList.add("active");
+  incBtn.classList.remove("active");
+}
+
+function addInc() {
+  const list = document.getElementById("list");
+  const item = document.createElement("li");
+  const input = document.querySelector("#incTitleInput").value;
+  const inputNumber = document.querySelector("#incAmountInput").value;
+  item.append(input + ":" + " $" + inputNumber);
+  list.appendChild(item);
+}
+
+// function myFunction() {
+//   // Create an "li" node:
+//   const node = document.createElement("li");
+
+//   // Create a text node:
+//   // const textnode = document.createTextNode("Water");
+//   const textnode = document.querySelector("#incTitleInput").value;
+
+//   // Append the text node to the "li" node:
+//   node.append(textnode);
+
+//   // Append the "li" node to the list:
+//   document.getElementById("list").appendChild(node);
+// }
