@@ -3,40 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit Converter</title>
+    <title>Grocey List</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Unit Converter</h1>
-    <div>
-    <input id="inp" type="text" placeholder="Enter number...">
-    <select id="conv" name="covnverter" >
-        <option value="roneur" selected>RON to EUR</option>
-        <option value="eurron">EUR to RON</option>
-        <option value="ronusd">RON to USD</option>
-        <option value="usdron">USD to RON</option>
-    </select>
-    <button onclick="func1()">Convert</button>
-    <p>Result:
-    <input id="result" type="text">
-</p>
-</div>
-<div>
-    <input id="inp1" type="text" placeholder="Enter number...">
-    <select id="conv1" name="covnverter">
-        <option value="kmmeters" selected>KM to MT</option>
-        <option value="meterskm">MT to KM</option>
-        <option value="kmmiles">KM to ML</option>
-        <option value="mileskm">ML to KM</option>
-        <option value="metersfeet">MT to FT</option>
-        <option value="feetmeters">FT to MT</option>
-        <option value="metersinch">MT to IN</option>
-        <option value="inchmeters">IN to MT</option>
-    </select>
-    <button onclick="func2()">Convert</button>
-    <p>Result:
-    <input id="result1" type="text">  
-</div>
+    <div class="section1">
+        <h1>Grocery List</h1>
+        <input id="inp" placeholder="Write Grocery Item...">
+        <button class="bt" onclick="func1()">Add Item</button>
+        <button class="bt1" onclick="func2()">Remove Item</button>
+        
+
+    </div>
+
+    <div class="section2">
+        <table id="mytable" style="width: 100%;">
+           
+        
+            
+        </table>
+    </div>
+    
+    
+
     <script src="scripts.js"></script>
 </body>
 </html>

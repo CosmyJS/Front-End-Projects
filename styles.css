@@ -1,20 +1,217 @@
-body, html{
-    background-color: aquamarine;
+/* General Styles */
+body, html {
     text-align: center;
+    height: 100%;
     margin: auto;
+    background-color: rgb(113, 211, 250);
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
-h1 {
+
+/* Section Styles */
+.section1, .section2 {
     background-color: aliceblue;
-    margin: 100px;
-    padding: 50px 100px 50px 100px;
-    border: white;
+    margin: 50px auto;
+    padding: 50px 0;
     border-radius: 20px;
-    font-size: 42px;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 72px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+}
+
+/* Input and Button Styles */
+#inp {
+    font-size: 18px;
+    padding: 10px;
+    border: solid 0.5px black;
+}
+
+.bt, .bt1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: aliceblue;
+    padding: 10px;
+    background-color: chartreuse;
+    border: solid 0.5px black;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Button Remove Styles */
+.btrmv, .btrmv1 {
+    padding: 15px;
+    font-size: 16px;
+    float: right;
+    border: none;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.btrmv {
+    background-color: tomato;
+}
+
+.btrmv1 {
+    background-color: chartreuse;
+}
+
+/* Table Styles */
+td {
+    border: solid 0.2px rgb(185, 185, 185);
+    padding-top: 50px;
+    text-align: left;
+    font-size: 22px;
+}
+
+.nr {
+    text-align: left;
+}
+
+.strikeout {
+    text-decoration: line-through;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section1, .section2 {
+        width: 90%;
+        padding: 30px 0;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    #inp, .bt, .bt1 {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .btrmv, .btrmv1 {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    td {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section1, .section2 {
+        width: 95%;
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    #inp, .bt, .bt1 {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .btrmv, .btrmv1 {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    td {
+        font-size: 18px;
+    }
+}
+
+
+
+/* body, html{
+    text-align: center;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(113, 211, 250);
+}
+
+.section1{
+    background-color: aliceblue;
+    margin: 50px 400px 50px 400px;
+    padding: 50px 0px 50px 0px;
+    border-radius: 20px;
     
 }
-p {
-    background-color: tomato;
-    padding: 10px 50px 10px 50px;
-    margin: 10px 720px 10px 720px;
-    border-radius: 10px;
+.section2{
+    background-color: aliceblue;
+    margin: 50px 400px 50px 400px;
+    padding: 0px 0px 0px 0px;
+    
+    
 }
+
+h1 {
+    font-size: 72px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#inp{
+    font-size: 18px;
+    padding: 10px;
+    border: solid 0.5px black;
+}
+
+.bt{
+    font-size: 18px;
+    font-weight:700;
+    color: aliceblue;
+    padding: 10px;
+    background-color: chartreuse;
+    border: solid 0.5px black;
+}
+.bt1{
+    font-size: 18px;
+    font-weight:700;
+    color: aliceblue;
+    padding: 10px;
+    background-color: chartreuse;
+    border: solid 0.5px black;
+}
+.btrmv{
+    background-color: tomato;
+    padding: 15px;
+    font-size: 16px;
+    float: right;
+    border: white;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.btrmv1{
+    background-color:chartreuse;
+    padding: 15px;
+    font-size: 16px;
+    float: right;
+    border: white;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+td{
+    border: solid 0.2px rgb(185, 185, 185);
+    padding-top: 50px;
+    text-align: left;
+    font-size: 22px;
+}
+.nr{
+    text-align: left;
+}
+
+.strikeout{
+    text-decoration: line-through;
+} */
